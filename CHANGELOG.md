@@ -1,4 +1,4 @@
-# Change Log
+## 3.0.0+1\n\n- PurpleSoft fork of 3.0.0: support html 0.15.7, which removed the top-level matches function.\n\n# Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
