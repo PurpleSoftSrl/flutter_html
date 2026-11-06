@@ -372,7 +372,7 @@ class MyHomePageState extends State<MyHomePage> {
             const TableHtmlExtension(),
             const SvgHtmlExtension(),
           ],
-          onLinkTap: (url, _, __) {
+          onLinkTap: (url, _, _) {
             debugPrint("Opening $url...");
           },
           onCssParseError: (css, messages) {

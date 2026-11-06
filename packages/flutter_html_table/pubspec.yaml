@@ -4,8 +4,10 @@ description: This extension package allows the <table> tag to be rendered using 
 version: 3.0.0
 homepage: https://github.com/Sub6Resources/flutter_html
 
+resolution: workspace
+
 environment:
-  sdk: ">=3.2.0 <4.0.0"
+  sdk: ^3.13.0
   flutter: ">=3.0.0"
 
 dependencies:

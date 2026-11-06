@@ -4,7 +4,7 @@ version: 3.0.0+3
 homepage: https://github.com/Sub6Resources/flutter_html
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: ^3.13.0
   flutter: '>=3.0.0'
 
 dependencies:
@@ -30,7 +30,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
   meta: ^1.15.0
-  melos: ^6.3.2
+  melos: ^8.10.0
 
 screenshots:
   - description: 'An example of the output produced by flutter_html'
@@ -52,3 +52,35 @@ topics:
   - css
   - widgets
   - layout
+
+workspace:
+  - packages/flutter_html_all
+  - packages/flutter_html_audio
+  - packages/flutter_html_iframe
+  - packages/flutter_html_math
+  - packages/flutter_html_svg
+  - packages/flutter_html_table
+  - packages/flutter_html_video
+  - example
+
+melos:
+  command:
+    version:
+      includeCommitId: true
+
+  scripts:
+    analyze:
+      exec: flutter analyze . --fatal-infos
+
+    test:selective_unit_test:
+      run: melos exec --dir-exists="test" --fail-fast -- flutter test --no-pub --coverage
+      description: Run Flutter tests for a specific package in this project.
+      select-package:
+        flutter: true
+        dir-exists: test
+
+    test:
+      run: melos run test:selective_unit_test --no-select
+      description: Run all Flutter tests in this project.
+
+    gen_coverage: melos exec -- "\$MELOS_ROOT_PATH/combine_coverage.sh"
