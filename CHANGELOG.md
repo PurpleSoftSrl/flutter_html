@@ -1,3 +1,7 @@
+## 3.0.0+3
+
+- Use material_ui instead of the SDK Material library (Flutter 3.47).
+
 ## 3.0.0+2
 
 - PurpleSoft fork of 3.0.0: support html 0.15.7, which removed the top-level matches function.
